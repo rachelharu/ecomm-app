@@ -1,21 +1,15 @@
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
-const cookieSession = require('cookie-session');
 const mongoose = require('mongoose');
-const md5 = require('md5');
+const bcrypt = require ('bcrypt');
+const saltRounds = 10;
 //creates variable app for express
 const app = express();
 //route handler request, response
 // req receives info
 // res sends info back
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(
-  cookieSession({
-    keys: [process.env.KEY],
-  })
-);
-
 
 mongoose.connect('mongodb://localhost:27017/userDB', { useNewUrlParser: true });
 
@@ -44,30 +38,35 @@ app.get('/signup', (req, res) => {
 });
 
 app.post('/signup', async (req, res) => {
-  const newUser = new User({
-    email: req.body.email,
-    password: md5(req.body.password)
+
+  bcrypt.hash(req.body.password, saltRounds, async (err, hash) => {
+    const newUser = new User({
+      email: req.body.email,
+      password: hash
+    });
+    const { email, password, passwordConfirmation } = req.body;
+    //checks for existing user
+    const existingUser = await User.findOne({ email: email });
+    if (existingUser) {
+       return res.send('Email in use');
+    }; 
+    // checks password match
+    if (password !== passwordConfirmation) {
+       return res.send('passwords must match');
+    };  
+    //saves users to db
+    newUser.save( (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('success');
+        res.send('Account created!!!');
+      }
+    });
   });
-  const { email, password, passwordConfirmation } = req.body;
-  //checks for existing user
-  const existingUser = await User.findOne({ email: email });
-  if (existingUser) {
-    return res.send('Email in use');
-  } 
-  // checks password match
-  if (password !== passwordConfirmation) {
-    return res.send('passwords must match');
-  }  
-  //saves users to db
-  newUser.save( (err) => {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log('success');
-      res.send('Account created!!!');
-    }
   });
-});
+
+  
 
 app.get('/signin', (req, res) => {
   res.send(`
