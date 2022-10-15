@@ -65,26 +65,6 @@ router.post(
     if (!errors.isEmpty()) {
       return res.send(signinTemplate({ errors }))
     } 
-    // const user = await User.findOne({ email });
-    
-    // User.findOne({ email: email }, (err, foundUser) => {
-    //   if (err) {
-    //     console.log(err);
-    //     res.send('Email or Password does not exist');
-    //   } else {
-    //     if (foundUser) {
-    //       bcrypt.compare(password, foundUser.password, (err, result) => {
-    //         if (result === true) {
-    //           res.send('You are signed in!!!');
-    //         } else {
-    //           if (!foundUser) {
-    //             console.log('error');
-    //           }
-    //         }
-    //       });
-    //     }
-    //   }
-    // });
     res.send('You are signed in!!!');
   }
 );
