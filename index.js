@@ -5,9 +5,8 @@ const mongoose = require('mongoose');
 const authRouter = require('./routes/admin/auth')
 
 const app = express();
-//route handler request, response
-// req receives info
-// res sends info back
+
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.connect('mongodb://localhost:27017/userDB', { useNewUrlParser: true });
