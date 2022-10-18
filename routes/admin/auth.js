@@ -12,7 +12,7 @@ const {
   requireEmailExists,
   requireValidPasswordForUser
 } = require('./validators');
-const User = require('./user');
+const User = require('../../repo/user');
 
 const router = express.Router();
 
