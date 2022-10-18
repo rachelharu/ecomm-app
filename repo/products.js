@@ -1,11 +1,11 @@
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-// const userSchema = new mongoose.Schema({
-//   email: String,
-//   password: String,
-//   passwordConfirmation: String,
-// });
+const productSchema = new mongoose.Schema({
+  title: String,
+  price: Number,
+  image: String,
+});
 
-// const User = new mongoose.model('User', userSchema);
+const Product = new mongoose.model('Product', productSchema);
 
-// module.exports = User;
+module.exports = Product;
