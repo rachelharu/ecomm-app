@@ -42,7 +42,7 @@ router.post(
           console.log(err);
         } else {
           console.log('success');
-          res.send('Account created!!!');
+          res.redirect('/admin/products');
         }
       });
     });
@@ -65,7 +65,7 @@ router.post(
     if (!errors.isEmpty()) {
       return res.send(signinTemplate({ errors }))
     } 
-    res.send('You are signed in!!!');
+    res.redirect('/admin/products');
   }
 );
 
