@@ -2,7 +2,6 @@ const { check } = require('express-validator');
 const { reset } = require('nodemon');
 const User = require('../../repo/user');
 const bcrypt = require('bcrypt');
-const express = require('express');
 
 module.exports = {
   requireTitle: check('title')
