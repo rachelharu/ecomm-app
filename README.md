@@ -4,6 +4,8 @@
 
 -~~authentication and security~~
 
+- show product display
+
 - build shopping cart
 
 
