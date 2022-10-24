@@ -17,6 +17,20 @@ const isAuth = (req, res, next) => {
   }
 };
 
+const handleErrors = (templateFunc, dataCb) => {
+  return async (req, res, next) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      let data = {};
+      if (dataCb) {
+        data = await dataCb(req);
+      }
+      return res.send(templateFunc({ errors, ...data }));
+    }
+    next();
+  };
+};
+
 router.get('/admin/products', isAuth, async (req, res) => {
   const products = await Product.find();
   res.send(productsIndexTemplate({ products }));
@@ -28,6 +42,7 @@ router.get('/admin/products/new', isAuth, (req, res) => {
 
 router.post(
   '/admin/products/new',
+  isAuth,
   upload.single('image'),
   [requireTitle, requirePrice],
   async (req, res) => {
@@ -39,7 +54,6 @@ router.post(
 
     const image = req.file.buffer.toString('base64');
     const { title, price } = req.body;
-
     const newProduct = new Product({
       title: title,
       price: price,
@@ -66,9 +80,29 @@ router.get('/admin/products/:id/edit', isAuth, async (req, res) => {
   res.send(productsEditTemplate({ product }));
 });
 
-router.post('/admin/products/:id/edit', isAuth, async (req, res) => {
-  
-});
+//////////
 
+router.post(
+  '/admin/products/:id/edit',
+  isAuth,
+  upload.single('image'),
+  [requireTitle, requirePrice],
+  handleErrors(productsEditTemplate, async req => {
+    const product = await Product.findById(req.params.id);
+    return { product };
+  }),
+  async (req, res) => {
+    const changes = req.body;
+    if (req.file) {
+      changes.image = req.file.buffer.toString('base64');
+    }
+    try {
+      await Product.updateOne({"_id": req.params.id}, changes);
+    } catch (err) {
+      return res.send('Could not find item');
+    }
+    res.redirect('/admin/products');
+  }
+);
 
 module.exports = router;
