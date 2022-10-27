@@ -30,9 +30,6 @@ module.exports = ({ content }) => {
                   <ul class="social">
                     <li><a href=""><i class="fab fa-facebook"></i></a></li>
                     <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href=""><i class="fab fa-dribbble"></i></a></li>
-                    <li><a href=""><i class="fab fa-google-plus"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -41,7 +38,8 @@ module.exports = ({ content }) => {
               <div class="container navbar-container">
                 <div>
                   <a href="/">
-                    <h3 class="title">EComm Shop</h3>
+                    <h3 class="title">Snack Attack</h3>
+                    <h4 class="subtitle">snacks from around the world!</h4>
                   </a>
                 </div>
                 <div class="navbar-item">
