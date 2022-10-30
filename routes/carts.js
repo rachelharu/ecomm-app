@@ -7,27 +7,23 @@ const router = express.Router();
 let cart;
 
 router.post('/cart/products', async (req, res) => {
-  if (!req.session.cartId) {
-    cart = await Carts.create({ items: [] });
-    req.session.cartId = cart.id;
+    
+Carts.findById(req.session.cartId, (err, foundCart) => {
+  if(foundCart){
+    console.log(foundCart);
   } else {
-    cart = await Carts.find({ _id: req.session.cartId });
-    console.log(req.session.cartId);
+    if(!foundCart){
+      const newCart = new Carts({
+        _id: req.session.cartId,
+        items: []
+      });
+      newCart.save();
+      console.log(newCart);
+    }
   }
-  console.log({ _id: req.body.productId });
+})
 
-
-
-  await Carts.updateOne(cart, {
-    $push: {
-      items: {
-        _id: req.body.productId,
-        quantity: 1,
-      },
-    },
-  });
-
-  console.log(cart);
+  
 
   res.send('product added to cart!!');
 });

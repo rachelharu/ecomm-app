@@ -5,6 +5,7 @@ const authRouter = require('./routes/admin/auth');
 const productsAdminRouter = require('./routes/admin/products');
 const productsRouter = require('./routes/products');
 const cartsRouter = require('./routes/carts');
+const session = require('express-session');
 
 const app = express();
 
