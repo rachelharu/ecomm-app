@@ -1,3 +1,4 @@
+const e = require('express');
 const express = require('express');
 const Carts = require('../repo/carts');
 
@@ -6,24 +7,39 @@ const Carts = require('../repo/carts');
 const router = express.Router();
 let cart;
 
+
 router.post('/cart/products', async (req, res) => {
-    
-Carts.findById(req.session.cartId, (err, foundCart) => {
-  if(foundCart){
-    console.log(foundCart);
+  Carts.findById(req.session.cartId, (err, foundCart) => {
+  if(err) {
+    console.log(err) // This err is for the find by Id, not to the update function
+  }
+  if (foundCart) {
+    console.log(foundCart)
+    console.log(req.body.productId)
+    Carts.updateOne( 
+      { _id:foundCart._id }, {
+      $push: {
+        items: {
+          _id: req.body.productId,
+          quantity: 1,
+        },
+      },
+    },(err, updatedCart) => {
+       if(err){
+         console.log(err)
+       }
+   }
+  );
   } else {
-    if(!foundCart){
+    if (!foundCart) {
       const newCart = new Carts({
         _id: req.session.cartId,
-        items: []
+        items: [],
       });
       newCart.save();
-      console.log(newCart);
     }
-  }
-})
-
-  
+  } 
+  });
 
   res.send('product added to cart!!');
 });
