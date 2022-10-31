@@ -16,6 +16,11 @@ router.post('/cart/products', async (req, res) => {
   if (foundCart) {
     console.log(foundCart)
     console.log(req.body.productId)
+    let check = foundCart.items.map(item => item.id);
+    console.log(check)
+    if( check.includes(req.body.productId)) {
+      console.log('MATCH FOUND')
+    }
     Carts.updateOne( 
       { _id:foundCart._id }, {
       $push: {
@@ -28,7 +33,7 @@ router.post('/cart/products', async (req, res) => {
        if(err){
          console.log(err)
        }
-   }
+   } 
   );
   } else {
     if (!foundCart) {
