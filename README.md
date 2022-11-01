@@ -4,9 +4,12 @@
 
 -~~authentication and security~~
 
-- show product display
+-~~show product display~~
 
 - build shopping cart
+
+- update styling
+
 
 
 
