@@ -8,16 +8,6 @@ let cart;
 
 router.post('/cart/products', async (req, res) => {
   try {
-    //  cart = await Carts.findById(req.session.cartId);
-    // // Check if cart exists
-    // if (!cart) {
-    //   // Create new cart
-    //   cart = await Carts.create({
-    //     _id: req.session.cartId,
-    //     items: [],
-    //   });
-    // }
-
     if (!req.session.cartId) {
       cart =  await Carts.create({ items: [] });
       req.session.cartId = cart.id;

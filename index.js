@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -12,13 +13,21 @@ const app = express();
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb://localhost:27017/userDB', { useNewUrlParser: true });
+//cloud DB
+mongoose.connect(
+  'mongodb+srv://admin-angela:' +
+    process.env.PASSWORD +
+    '@cluster0.syiim.mongodb.net/userDB',
+  { useNewUrlParser: true }
+);
+
 
 app.use(authRouter);
 app.use(productsAdminRouter);
 app.use(productsRouter);
 app.use(cartsRouter);
 
-app.listen(3000, () => {
-  console.log('Listening');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log('Server listening on http://localhost:' + PORT);
 });

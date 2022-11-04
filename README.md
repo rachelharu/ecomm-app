@@ -6,7 +6,7 @@
 
 -~~show product display~~
 
-- build shopping cart
+-~~build shopping cart~~
 
 - update styling
 

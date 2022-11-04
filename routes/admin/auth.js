@@ -19,13 +19,13 @@ const User = require('../../repo/user');
 const router = express.Router();
 
 const store = new mongoDBSession({
-  uri: 'mongodb://localhost:27017/userDB',
+  uri: 'mongodb+srv://admin-angela:' + process.env.PASSWORD + '@cluster0.syiim.mongodb.net/userDB',
   collection: 'sessions',
 });
 
 router.use(
   session({
-    secret: 'some key',
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
     store: store,
