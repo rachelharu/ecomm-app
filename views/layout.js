@@ -38,7 +38,7 @@ module.exports = ({ content }) => {
         
           ${content}
           
-          <footer class="footer">
+          <footer class="footer navbar-top">
                 <div class="container navbar-container">
                   <div>
                     <ul class="social">
