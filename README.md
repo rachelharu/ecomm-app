@@ -8,6 +8,8 @@
 
 -~~build shopping cart~~
 
+- create product info page
+
 - update styling
 
 
