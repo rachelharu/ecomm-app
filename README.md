@@ -1,5 +1,9 @@
-#Ecommerce App
+# snackattack
 
+### snackattack an ecommerce shop app with a shopping cart and product display along with an admin panel featuring product CRUD capabilities, and  security/authentication login and signup.
+
+## To do
+###
 -~~be able to create account for a user~~
 
 -~~authentication and security~~
@@ -14,6 +18,5 @@
 
 
 
-
-
+## Created with:
 mongodb, mongoose, express, nodejs
