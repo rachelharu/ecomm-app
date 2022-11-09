@@ -1,6 +1,6 @@
-# snackattack
+# snack attack
 
-### snackattack an ecommerce shop app with a shopping cart and product display along with an admin panel featuring product CRUD capabilities, and  security/authentication login and signup.
+### snack attack an ecommerce shop app with a shopping cart and product display along with an admin panel featuring product CRUD capabilities, security/authentication login and signup.
 
 ## To do
 ###

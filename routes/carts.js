@@ -9,13 +9,13 @@ let cart;
 router.post('/cart/products', async (req, res) => {
   try {
     if (!req.session.cartId) {
-      cart =  await Carts.create({ items: [] });
+      cart = await Carts.create({ items: [] });
       req.session.cartId = cart.id;
-      } else {
-        cart = await Carts.findById({ _id: req.session.cartId });
-        console.log(req.session.cartId);
-      }
-      console.log(cart);
+    } else {
+      cart = await Carts.findById({ _id: req.session.cartId });
+      console.log(req.session.cartId);
+    }
+    console.log(cart);
 
     // Check if product is present
     const productIndex = cart.items.findIndex(
@@ -40,7 +40,7 @@ router.post('/cart/products', async (req, res) => {
   } catch (err) {
     console.log(err);
     res.status(500).send('there was an error');
-  } 
+  }
 });
 
 router.get('/cart', async (req, res) => {

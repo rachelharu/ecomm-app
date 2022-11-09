@@ -32,7 +32,7 @@ module.exports = ({ products }) => {
       <section class="banner">
         <div class="container">
           <div class="columns is-centered">
-            <img src="/images/banner.jpg" />
+            <img class="big-logo" src="/images/snack-attack-logo.png" />
           </div>
         </div>
       </section>
