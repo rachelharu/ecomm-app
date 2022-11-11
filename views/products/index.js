@@ -38,7 +38,7 @@ module.exports = ({ products }) => {
       </section>
       
       <section>
-        <div class="container">
+        <div class="container product-container">
           <div class="columns">
             <div class="column "></div>
             <div class="column is-four-fifths">

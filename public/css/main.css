@@ -23,7 +23,13 @@ body {
 }
 
 .banner {
-  margin: 50px;
+  background-color: pink;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .columns.products {
@@ -159,6 +165,7 @@ body {
 .big-logo {
   height: 500px;
   width: 500px;
+  border-radius: 50px;
 }
 
 .navbar-item {
@@ -185,6 +192,11 @@ body {
   display: flex;
 }
 
+.product-container {
+  margin-top: 25px;
+}
+
+
 @media screen and (max-width: 1023px) {
   #navbar-content {
     flex-grow: 1;
@@ -196,3 +208,4 @@ body {
     padding: 8, 8 !important;
   }
 }
+
