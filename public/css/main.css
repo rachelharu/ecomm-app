@@ -23,7 +23,7 @@ body {
 }
 
 .banner {
-  background-color: pink;
+  background-color: #ffe4e1;
   margin-left: 0px;
   margin-top: 0px;
   margin-right: 0px;
@@ -165,7 +165,7 @@ body {
 .big-logo {
   height: 500px;
   width: 500px;
-  border-radius: 50px;
+  border-radius: 900px;
 }
 
 .navbar-item {
