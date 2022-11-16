@@ -163,9 +163,9 @@ body {
 }
 
 .big-logo {
-  height: 500px;
-  width: 500px;
-  border-radius: 900px;
+  height: 50%;
+  width: 50%;
+  border-radius: 500px!important;
 }
 
 .navbar-item {
@@ -196,6 +196,17 @@ body {
   margin-top: 25px!important;
 }
 
+@media screen and (max-width: 388px) {
+  #navbar-content {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .big-logo {
+    margin-left: 25%;
+  }
+}
 
 @media screen and (max-width: 1023px) {
   #navbar-content {
@@ -208,4 +219,6 @@ body {
     padding: 8, 8 !important;
   }
 }
+
+
 
