@@ -26,7 +26,7 @@ module.exports = ({ products }) => {
   
     return layout({
       content: `
-        <div class="control">
+        <div class="control margintop">
           <h1 class="subtitle">Products</h1>  
           <a href="/admin/products/new" class="button is-primary">New Product</a>
         </div>

@@ -6,6 +6,7 @@ module.exports = ({ content }) => {
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>snack attack</title>
+          <link rel="icon" type="image/x-icon" href="/images/candyfavicon.jpg">
           <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
           <link href="/css/main.css" rel="stylesheet">

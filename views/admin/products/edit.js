@@ -5,7 +5,7 @@ module.exports = ({ product, errors }) => {
   return layout({
     content: `
       <div class="columns is-centered">
-        <div class="column is-half">
+        <div class="column is-half margintop">
           <h1 class="subtitle">Edit a Product</h1>
 
           <form method="POST" enctype="multipart/form-data">
