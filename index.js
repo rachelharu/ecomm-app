@@ -6,10 +6,12 @@ const authRouter = require('./routes/admin/auth');
 const productsAdminRouter = require('./routes/admin/products');
 const productsRouter = require('./routes/products');
 const cartsRouter = require('./routes/carts');
+const compression = require('compression');
 const session = require('express-session');
 
 const app = express();
 
+app.use(compression());
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
