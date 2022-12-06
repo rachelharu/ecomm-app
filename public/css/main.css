@@ -221,6 +221,10 @@ body {
   .big-logo {
     margin-left: 25%;
   }
+
+  .mobile-image {
+    width: 200px
+  }
 }
 
 @media screen and (max-width: 1023px) {
