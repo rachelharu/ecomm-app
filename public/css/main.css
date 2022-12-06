@@ -172,6 +172,7 @@ body {
   border-radius: 500px !important;
 }
 
+
 .navbar-item {
   display: flex !important;
   align-items: center !important;
@@ -210,6 +211,7 @@ body {
 .margintop {
   margin-top: 100px!important;
 }
+
 
 @media screen and (max-width: 388px) {
   #navbar-content {
