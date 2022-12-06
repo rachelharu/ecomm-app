@@ -1,12 +1,12 @@
 require('dotenv').config();
 const express = require('express');
+const compression = require('compression');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const authRouter = require('./routes/admin/auth');
 const productsAdminRouter = require('./routes/admin/products');
 const productsRouter = require('./routes/products');
 const cartsRouter = require('./routes/carts');
-const compression = require('compression');
 const session = require('express-session');
 
 const app = express();
