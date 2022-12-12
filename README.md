@@ -14,7 +14,7 @@
 
 - create product info page
 
-- update styling
+-~~update styling~~
 
 
 
