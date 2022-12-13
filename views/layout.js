@@ -22,8 +22,6 @@ module.exports = ({ content }) => {
           
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"></link>
           <link href="/css/main.css" rel="stylesheet">
-          
-          
         </head>
   
         <body>
