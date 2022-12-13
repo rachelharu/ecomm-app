@@ -7,14 +7,23 @@ module.exports = ({ content }) => {
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>snack attack</title>
           <link rel="preload" as="image" href="/images/snack-attack-logo.png" />
+
+          <script type="text/javascript"> (function() 
+          { var css = document.createElement('link'); 
+          css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';
+           css.rel = 'stylesheet'; css.type = 'text/css'; 
+           document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+
+           <link rel="preconnect" href="https://fonts.googleapis.com">
+           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+           <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap" rel="stylesheet">
           <link rel="icon" type="image/x-icon" href="/images/candyfavicon.jpg">
           <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
-          <link href="/css/main.css" rel="stylesheet">
+          
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"></link>
-          <link rel="preconnect" href="https://fonts.googleapis.com">
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-          <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;600&display=swap" rel="stylesheet">
+          <link href="/css/main.css" rel="stylesheet">
+          
+          
         </head>
   
         <body>
