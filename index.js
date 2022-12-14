@@ -1,6 +1,6 @@
 require('dotenv').config();
-const express = require('express');
 const compression = require('compression');
+const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const authRouter = require('./routes/admin/auth');
@@ -14,6 +14,9 @@ const app = express();
 app.use(compression());
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
+
+
+
 
 //cloud DB
 mongoose.connect(

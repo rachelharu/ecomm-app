@@ -14,7 +14,7 @@ module.exports = ({ content }) => {
           <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"></link>
           <link href="/css/main.css" rel="stylesheet"> 
-          <script src="https://kit.fontawesome.com/f05087d4f2.js" crossorigin="anonymous"></script>
+          <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
         </head>
   
         <body>
