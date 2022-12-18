@@ -14,7 +14,6 @@ module.exports = ({ content }) => {
           <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"></link>
           <link href="/css/main.css" rel="stylesheet"> 
-          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <body>
         <header>
           <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
@@ -45,17 +44,21 @@ module.exports = ({ content }) => {
                   <div>
                     <ul class="social">
                       <li>
-                        <a href=""><i class="fa fa-phone"></i>+1 555 987 6543</a>
+                        <a href="">About</a>
                       </li>
                       <li>
-                        <a href=""><i class="fa fa-envelope"></i> snackattack@snackattack.com</a>
+                      <a href="">Careers</a>
+                    </li>
+                      <li>
+                        <a href="">Contact</a>
                       </li>
                     </ul>
                   </div>
                   <div>
                     <ul class="social">
-                      <li><a href=""><i class="fab fa-facebook"></i></a></li>
-                      <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                      <li><a href="">Order Status</li>
+                      <li><a href="">Returns</a></li>
+                      <li><a href="">Customer Support</a></li>
                     </ul>
                   </div>
                 </div>
