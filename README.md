@@ -16,6 +16,8 @@
 
 -~~update styling~~
 
+- create a payment option 
+
 
 
 ## Created with:

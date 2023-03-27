@@ -19,6 +19,7 @@ module.exports = ({ products }) => {
             <button class="button is-danger">Delete</button>
           </form>  
           </td>
+          <td>${product.type}</td>
         </tr>
       `;
       })
@@ -37,6 +38,7 @@ module.exports = ({ products }) => {
               <th>Price</th>
               <th>Edit</th>
               <th>Delete</th>
+              <th>Type</th>
             </tr>
           </thead>
           <tbody>

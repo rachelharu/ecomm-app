@@ -58,6 +58,7 @@ router.post(
       title: title,
       price: price,
       image: image,
+      type: type,
     });
 
     newProduct.save((err) => {
