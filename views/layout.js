@@ -30,6 +30,18 @@ module.exports = ({ content }) => {
         </a>
         </div>
 
+        <div class="buttons">
+        <a  href="/categories/drink">
+              Drinks
+        </a>
+        </div>
+
+        <div class="buttons">
+        <a  href="/categories/snack">
+              Snacks
+        </a>
+        </div>
+
           <div id="navbar-content" class="navbar-menu is-centered ">
             <div class="navbar-end ">
               <div class="navbar-item">

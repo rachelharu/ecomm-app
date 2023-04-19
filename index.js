@@ -7,7 +7,7 @@ const authRouter = require('./routes/admin/auth');
 const productsAdminRouter = require('./routes/admin/products');
 const productsRouter = require('./routes/products');
 const cartsRouter = require('./routes/carts');
-const candyRouter = require('./routes/candy');
+const categoryRouter = require('./routes/categories');
 const session = require('express-session');
 
 const app = express();
@@ -32,7 +32,8 @@ app.use(authRouter);
 app.use(productsAdminRouter);
 app.use(productsRouter);
 app.use(cartsRouter);
-app.use(candyRouter);
+app.use(categoryRouter);
+
 
 
 const PORT = process.env.PORT || 3009;

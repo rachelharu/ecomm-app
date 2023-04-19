@@ -1,6 +1,6 @@
 const layout = require('../layout');
 
-module.exports = ({ products }) => {
+module.exports = ({ products, title }) => {
   const renderedProducts = products
     .map(product => {
       return `
@@ -32,7 +32,7 @@ module.exports = ({ products }) => {
       <section class="banner">
         <div class="container">
           <div class="columns is-centered">
-            <img class="big-logo" src="/images/snack-attack-logo.png" />
+            
           </div>
         </div>
       </section>
@@ -43,7 +43,7 @@ module.exports = ({ products }) => {
             <div class="column "></div>
             <div class="column is-four-fifths">
               <div>
-                <h2 class="title text-center">Candy</h2>
+                <h2 class="title text-center">${title}</h2>
                 <div class="columns products">
                   ${renderedProducts}  
                 </div>
