@@ -7,6 +7,7 @@ const authRouter = require('./routes/admin/auth');
 const productsAdminRouter = require('./routes/admin/products');
 const productsRouter = require('./routes/products');
 const cartsRouter = require('./routes/carts');
+const candyRouter = require('./routes/candy');
 const session = require('express-session');
 
 const app = express();
@@ -31,8 +32,10 @@ app.use(authRouter);
 app.use(productsAdminRouter);
 app.use(productsRouter);
 app.use(cartsRouter);
+app.use(candyRouter);
 
-const PORT = process.env.PORT || 3000;
+
+const PORT = process.env.PORT || 3009;
 app.listen(PORT, () => {
   console.log('Server listening on http://localhost:' + PORT);
 });
