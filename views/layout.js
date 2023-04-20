@@ -1,3 +1,5 @@
+
+
 module.exports = ({ content }) => {
   return `
       <!DOCTYPE html>
@@ -15,50 +17,67 @@ module.exports = ({ content }) => {
           <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"></link>
           <link href="/css/main.css" rel="stylesheet"> 
-        <body>
-        <header>
-          <nav class="navbar has-background-light" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-              <a class="navbar-item" href="/">
-                <h3 class="title">Snack Attack</h3>
-              </a>
-            </div>
 
-        <div class="buttons">
-        <a  href="/categories/candy">
-              Candy
-        </a>
+          <script>
+            window.addEventListener('DOMContentLoaded', () => {
+              const navbarBurger = document.querySelector('.navbar-burger');
+              const navbarMenu = document.querySelector('.navbar-menu');
+
+              navbarBurger.addEventListener('click', () => {
+                navbarBurger.classList.toggle('is-active');
+                navbarMenu.classList.toggle('is-active');
+              });
+            });
+            </script>
+          <\head>
+
+      <body>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <h3 class="title">Snack Attack</h3>
+          </a>
+
+         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
         </div>
 
-        <div class="buttons">
-        <a  href="/categories/drink">
-              Drinks
-        </a>
+        <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/categories/candy">
+            Candy
+          </a>
+
+          <a class="navbar-item" href="/categories/drink">
+            Drinks
+          </a>
+
+          <a class="navbar-item" href="/categories/snack">
+            Snacks
+          </a>
+
+        </div>
         </div>
 
-        <div class="buttons">
-        <a  href="/categories/snack">
-              Snacks
-        </a>
-        </div>
-
-          <div id="navbar-content" class="navbar-menu is-centered ">
-            <div class="navbar-end ">
-              <div class="navbar-item">
-                <div class="buttons">
-                    <a  href="/cart">
-                      <i class="ri-shopping-bag-line"></i>
-                    </a>
-                </div>
-              </div>
-            </div>
+        <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+          <a  href="/cart">
+            <i class="ri-shopping-bag-line"></i>
+          </a>
           </div>
-          </nav>
-        </header>
+        </div>
+        </div>
+        </div>
+      </nav>
+
         
-          ${content}
+      ${content}
           
-        <footer class="footer navbar-top">
+      <footer class="footer navbar-top">
                 <div class="container navbar-container">
                   <div>
                     <ul class="social">
@@ -81,8 +100,10 @@ module.exports = ({ content }) => {
                     </ul>
                   </div>
                 </div>
-        </footer>
-        </body>        
+      </footer>
+      </body>        
       </html>
     `;
 };
+
+
