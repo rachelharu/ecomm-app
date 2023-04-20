@@ -220,6 +220,9 @@ body {
   margin-top: 100px!important;
 }
 
+.product-img:hover {
+  cursor: pointer;
+}
 
 @media screen and (max-width: 388px) {
   #navbar-content {

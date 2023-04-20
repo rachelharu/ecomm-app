@@ -44,7 +44,7 @@ module.exports = ({ products }) => {
             <div class="column is-four-fifths">
               <div>
                 <h2 class="title text-center">Discover our products</h2>
-                <div class="columns products">
+                <div class="columns products product-img">
                   ${renderedProducts}  
                 </div>
               </div>

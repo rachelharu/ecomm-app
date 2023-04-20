@@ -35,7 +35,7 @@ module.exports = ({ content }) => {
       <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
           <a class="navbar-item" href="/">
-            <h3 class="title">Snack Attack</h3>
+            <h3 class="title">snack attack</h3>
           </a>
 
          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
