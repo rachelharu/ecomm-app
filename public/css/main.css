@@ -221,7 +221,19 @@ body {
 }
 
 .product-img:hover {
-  cursor: pointer;
+  cursor: pointer; 
+}
+
+.product-underline:hover {
+  text-decoration: underline;
+}
+
+.product-grow {
+  transition: all .2s ease-in-out; 
+}
+
+.product-grow:hover {
+  transform: scale(1.1); 
 }
 
 @media screen and (max-width: 388px) {

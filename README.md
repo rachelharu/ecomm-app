@@ -18,6 +18,7 @@
 
 - create a payment option 
 
+-~~create new navbar with burger menu~~
 
 
 ## Created with:
