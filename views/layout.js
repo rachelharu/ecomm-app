@@ -46,7 +46,7 @@ module.exports = ({ content }) => {
         </div>
 
         <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
+        <div class="navbar-start reveal-background">
           <a class="navbar-item" href="/categories/candy">
             Candy
           </a>
