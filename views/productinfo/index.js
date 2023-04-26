@@ -4,17 +4,26 @@ module.exports = ({ products, title }) => {
   const renderedProducts = products
     .map(product => {
       return `
-        <div class="column is-one-quarter">
-        <a href="/productinfo/${product.title}">
-          <div class="card product-card product-grow">
-            <figure>
-              <img class="mobile-image" src="data:image/png;base64, ${product.image}"/>
-            </figure>
-            <div class="card-content">
-              <h3 class="subtitle">${product.title}</h3>
-              <h5 class="price-tag">$${product.price}</h5>
-            </div>
-            <footer class="card-footer">
+        <div class="columns">
+
+            <div class="column info-card">
+              <figure>
+                <img class="" src="data:image/png;base64, ${product.image}"/>
+              </figure>
+           </div>
+
+            <div class="column info-card-two">
+              product description n publishing and graphic design,
+               Lorem ipsum is a placeholder text commonly used to 
+               demonstrate the visual form of a document or a typeface 
+               without relying on meaningful content. 
+               Lorem ipsum may be used as a placeholder before final
+                copy is available
+            <footer class="info-add-cart">
+              <div class="card-content">
+                <h3 class="subtitle">${product.title}</h3>
+                <h5 class="price-tag">$${product.price}</h5>
+              </div>
               <form action="/cart/products" method="POST">
                 <input hidden value="${product.id}" name="productId" />
                 <button class="button has-icon is-inverted product-underline">
@@ -22,13 +31,11 @@ module.exports = ({ products, title }) => {
                 </button>
               </form>
             </footer>
-          </div>
-        </a>
-        </div>        
+            </div>
+        </div>
       `;
     })
     .join('\n');
-
 
   return layout({
     content: `

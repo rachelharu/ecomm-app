@@ -242,6 +242,24 @@ body {
   background-color:white;
 }
 
+.info-card {
+  align-items: center;
+}
+
+.info-card-two {
+  align-items: center;
+  text-align: center;
+}
+
+
+.info-add-cart {
+ margin-top: 45px;
+}
+
+.columns {
+  margin: 5px 5px;
+}
+
 @media screen and (max-width: 388px) {
   #navbar-content {
     margin-left: 0;

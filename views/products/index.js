@@ -5,6 +5,7 @@ module.exports = ({ products }) => {
     .map(product => {
       return `
         <div class="column is-one-quarter">
+        <a href="/productinfo/${product.title}">
           <div class="card product-card product-grow">
             <figure>
               <img class="mobile-image" src="data:image/png;base64, ${product.image}"/>
@@ -22,6 +23,7 @@ module.exports = ({ products }) => {
               </form>
             </footer>
           </div>
+          </a>
         </div>
       `;
     })

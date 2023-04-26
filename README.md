@@ -12,14 +12,14 @@
 
 -~~build shopping cart~~
 
-- create product info page
+-~~create product info page~~
+    - add product info to schema and add data to database through admin panel
 
 -~~update styling~~
 
-- create a payment option 
-
 -~~create new navbar with burger menu~~
 
+- create a payment option 
 
 ## Created with:
 mongodb, mongoose, express, nodejs
